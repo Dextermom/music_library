@@ -1,0 +1,11 @@
+<h1><%= @solo.title %></h1>
+<h2> Composer: <%= @solo.composer %></h2>
+<h3> PML: <%= @solo.PML %></h3>
+
+<footer>
+  <p>
+    <%= link_to 'All Solos', root_path %>
+    <%= link_to 'Edit Solo', edit_solo_path(@solo) %>
+    <%= link_to 'Delete Solo', solo_path(@solo), method: :delete, data: {confirm: 'Are you sure?'}  %>
+  </p>
+</footer>

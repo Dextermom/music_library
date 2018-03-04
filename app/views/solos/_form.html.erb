@@ -1,0 +1,20 @@
+<%= form_for(@solo) do |f| %>
+<p>
+  <%= f.label :title %><br/>
+  <%= f.text_field :title %>
+</p>
+
+<p>
+  <%= f.label :composer %>
+  <%= f.text_field :composer %>
+</p>
+
+<p>
+  <%= f.label :PML %>
+  <%= f.number_field :PML %>
+</p>
+
+<p>
+  <%= f.submit %>
+</p>
+<% end %>
