@@ -6,6 +6,7 @@ end
 
 def show
 @student = Student.find(params[:id])
+@solos = @student.solos
 end
 
 def new

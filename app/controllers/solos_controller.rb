@@ -6,6 +6,7 @@ class SolosController < ApplicationController
 
   def show
     @solo = Solo.find(params[:id])
+    @students = @solo.students
   end
 
   def edit

@@ -5,6 +5,21 @@
   </header>
 </article>
 
+<p>
+  <% if @solos.any? %>
+    <h3>Entries</h3>
+      <h4><%= pluralize(@solos.size, 'student') %></h4>
+        <ul>
+          <% @solos.each do |solo| %>
+            <li>
+              <%= link_to solo.title, solo %>
+            </li>
+          <% end %>
+        </ul>
+    <% end %>
+</p>
+
+
 <footer>
   <%= link_to 'All Students', students_path %>
   <%= link_to 'Edit Student', edit_student_path %>

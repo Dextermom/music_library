@@ -2,6 +2,21 @@
 <h2> Composer: <%= @solo.composer %></h2>
 <h3> PML: <%= @solo.PML %></h3>
 
+<p>
+  <% if @students.any? %>
+    <h3>Entries</h3>
+      <h4><%= pluralize(@students.size, 'student') %></h4>
+        <ul>
+          <% @students.order(:grad_year).each do |student| %>
+            <li>
+              <%= link_to student.name, student %>
+            </li>
+          <% end %>
+        </ul>
+    <% end %>
+</p>
+
+
 <footer>
   <p>
     <%= link_to 'All Solos', root_path %>

@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  solo: 
-  student: 
+  solo: one
+  student: one
 
 two:
-  solo: 
-  student: 
+  solo: two
+  student: two
