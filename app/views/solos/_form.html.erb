@@ -1,4 +1,5 @@
 <%= form_for(@solo) do |f| %>
+<%= render 'shared/errors' %>
 <p>
   <%= f.label :title %><br/>
   <%= f.text_field :title %>

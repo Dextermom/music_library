@@ -14,8 +14,11 @@ class SolosController < ApplicationController
 
   def update
     @solo = Solo.find(params[:id])
-    @solo.update(solo_params)
-    redirect_to @solo
+    if @solo.update(solo_params)
+      redirect_to @solo, notice: "Solo successfully updated!"
+    else
+      render :edit
+    end
   end
 
   def new
@@ -24,14 +27,17 @@ class SolosController < ApplicationController
 
   def create
     @solo = Solo.new(solo_params)
-    @solo.save
-    redirect_to @solo
+    if @solo.save
+      redirect_to @solo, notice: "Solo successfully created!"
+    else
+      render :new
+    end
   end
 
   def destroy
     @solo = Solo.find(params[:id])
     @solo.destroy
-    redirect_to solos_url
+    redirect_to solos_url, alert: "Solo successfully deleted!"
   end
 
   private

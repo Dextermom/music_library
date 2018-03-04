@@ -10,12 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180304001229) do
+ActiveRecord::Schema.define(version: 20180304221908) do
 
   create_table "solos", force: :cascade do |t|
     t.string "title"
     t.string "composer"
     t.integer "PML"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "students", force: :cascade do |t|
+    t.string "name"
+    t.string "grad_year"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -15,6 +15,10 @@ header#page-header h1 {
 footer#page-footer {
   color: $primary-color;
   background: $secondary-color;
-  width: 400px;
+  padding: 5px;
   border-top: 3px solid darken($secondary-color, 25%)
+}
+
+footer#page-footer p {
+  text-align: center;
 }
