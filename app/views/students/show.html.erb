@@ -1,0 +1,12 @@
+<artcle id="student">
+  <header>
+    <h1><%= @student.name %></h1>
+    <h2><%= @student.grad_year %></h2>
+  </header>
+</article>
+
+<footer>
+  <%= link_to 'All Students', students_path %>
+  <%= link_to 'Edit Student', edit_student_path %>
+  <%= link_to 'Delete Student', @student, method: :delete, data: {confirm: "Are you sure?"} %>
+</footer>

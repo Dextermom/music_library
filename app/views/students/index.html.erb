@@ -1,0 +1,15 @@
+<header id="content-header">
+  <h1><%= pluralize(@students.size, 'Student') %></h1>
+</header>
+
+<ul id="students">
+  <% @students.each do |student| %>
+    <li>
+      <%= link_to student.name, student %>
+    </li>
+    <% end %>
+  </ul>
+
+  <footer>
+    <%= link_to 'All Solos', root_path %>
+  </footer>

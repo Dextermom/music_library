@@ -1,0 +1,22 @@
+<%= form_for(@student) do |f| %>
+  <%= render "shared/errors", object: @student %>
+  <fieldset>
+    <ol>
+      <li class = "required">
+        <%= f.label :name %>
+        <%= f.text_field :name, size: 40, autofocus: true %>
+      </li>
+      <li class="required">
+        <%= f.label :grad_year %>
+        <%= f.text_field :grad_year, size: 10 %>
+      </li>
+    </ol>
+    <p>
+      <% if @student.new_record? %>
+      <%= f.submit "Create Student" %>
+      <% else %>
+      <%= f.submit "Update Student" %>
+      <% end %>
+    </p>
+  </fieldset>
+  <% end %>

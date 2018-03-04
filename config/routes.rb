@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :entries
   resources :students
   root "solos#index"
   resources :solos
