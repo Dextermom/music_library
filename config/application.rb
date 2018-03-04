@@ -11,12 +11,13 @@ module MusicLibrary
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
 
-    console do
-      ActiveRecord::Base.connection
-    end
-    end
+
+  
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+    console do
+      ActiveRecord::Base.connection
+    end
   end
 end
