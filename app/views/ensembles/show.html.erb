@@ -1,0 +1,28 @@
+<h1><%= @ensemble.title %></h1>
+<h2> Voicing: <%= @ensemble.voicing %></h2>
+<h3> Composer: <%= @ensemble.composer %></h3>
+<h4> Publisher: <%= @ensemble.publisher %></h4>
+<h5> PML: <%= @ensemble.pml %></h5>
+
+<p>
+  <% if @students.any? %>
+    <h3>Entries</h3>
+      <h4><%= pluralize(@students.size, 'student') %></h4>
+        <ul>
+          <% @students.order(:grad_year).each do |student| %>
+            <li>
+              <%= link_to student.name, student %>
+            </li>
+          <% end %>
+        </ul>
+    <% end %>
+</p>
+
+
+<footer>
+  <p>
+    <%= link_to 'All Ensembles', root_path %>
+    <%= link_to 'Edit Ensemble', edit_ensemble_path(@ensemble) %>
+    <%= link_to 'Delete Ensemble', solo_path(@ensemble), method: :delete, data: {confirm: 'Are you sure?'}  %>
+  </p>
+</footer>

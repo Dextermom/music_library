@@ -1,0 +1,6 @@
+<h3>Vocal Ensembles</h3>
+
+<ul>
+  <% @ensembles.order(:title).each do |ensemble| %>
+    <li><%= link_to ensemble.title, ensemble %></li>
+  <% end %>

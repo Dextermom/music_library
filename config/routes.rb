@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :groups
+  resources :ensembles
   resources :entries
   resources :students
   root "solos#index"

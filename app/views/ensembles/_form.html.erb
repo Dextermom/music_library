@@ -1,0 +1,35 @@
+<%= form_for(@ensemble) do |f| %>
+<%= render 'shared/errors', object: @ensemble %>
+<p>
+  <%= f.label :title %><br/>
+  <%= f.text_field :title, size: 40, autofocus: true %>
+</p>
+
+<p>
+  <%= f.label :voicing %>
+  <%= f.text_field :voicing, size: 20 %>
+</p>
+
+<p>
+  <%= f.label :composer %>
+  <%= f.text_field :composer %>
+</p>
+
+<p>
+  <%= f.label :publisher %>
+  <%= f.text_field :publisher %>
+</p>
+
+<p>
+  <%= f.label :pml %>
+  <%= f.number_field :pml %>
+</p>
+
+<p>
+  <% if @ensemble.new_record? %>
+  <%= f.submit "Create Ensemble" %>
+  <% else %>
+  <%= f.submit "Update Ensemble" %>
+  <% end %>
+</p>
+<% end %>
